@@ -5,9 +5,9 @@ This sample writes user-specified text to a custom XML part that is bound to a c
 
 The Add-ins for Office: Work with custom XML parts sample opens a Word file, CustomXMLPartSample.docx, which already contains a custom XML part that has the namespace TimeSummary. When the user enters text in the Client Name text box and chooses Update Client, the cmdUpdateClient_onClick function is executed. This function uses the  getByNamespaceAsync method of the  CustomXmlParts object to identify the custom XML part whose namespace is TimeSummary. The function is passed a callback function, onGotXml, which uses the  getNodesAsync method of the  CustomXmlPart object to get the Client node of the XML part. That function, in turn, is passed another callback function, onGotNode, which uses the  setXmlAsync method of the  CustomXmlNode object to set the text in the content control that is bound to the client node of the Time Summary custom XML part to the new text.
 
-Choosing Is Part Built In executes the showXMLPartBuiltIn function, which uses the  getByIdAsync method of the CustomXmlParts object to get the Time Summary part, and then it uses the  builtIn property of the CustomXmlPart object to test whether the part is built-in or custom.
+Choosing the Is Part Built In button executes the showXMLPartBuiltIn function, which uses the  getByIdAsync method of the CustomXmlParts object to get the Time Summary part, and then it uses the  builtIn property of the CustomXmlPart object to test whether the part is built-in or custom.
 
-Choosing Add Part executes the addCustomXMLPart function, which uses the  addAsync method of the CustomXmlParts object to add a new custom XML part named NewCustomXmlPart to the document. Choosing Delete Part executes the deletePart function, which uses the  deleteAysnc method of the CustomXmlPart object to delete the part.
+Choosing the Add Part button executes the addCustomXMLPart function, which uses the  addAsync method of the CustomXmlParts object to add a new custom XML part named NewCustomXmlPart to the document. Choosing Delete Part executes the deletePart function, which uses the  deleteAysnc method of the CustomXmlPart object to delete the part.
 
 **Prerequisites**
 
