@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomXMLApp", "CustomXMLApp\CustomXMLApp.csproj", "{E5B1C0EA-B5A7-42E5-9570-9C40F859A7C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomXMLAppWeb", "CustomXMLAppWeb\CustomXMLAppWeb.csproj", "{AD3444CB-16F6-4D9E-AE06-33633F6279AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5B1C0EA-B5A7-42E5-9570-9C40F859A7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B1C0EA-B5A7-42E5-9570-9C40F859A7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B1C0EA-B5A7-42E5-9570-9C40F859A7C4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E5B1C0EA-B5A7-42E5-9570-9C40F859A7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B1C0EA-B5A7-42E5-9570-9C40F859A7C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B1C0EA-B5A7-42E5-9570-9C40F859A7C4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AD3444CB-16F6-4D9E-AE06-33633F6279AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3444CB-16F6-4D9E-AE06-33633F6279AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3444CB-16F6-4D9E-AE06-33633F6279AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3444CB-16F6-4D9E-AE06-33633F6279AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

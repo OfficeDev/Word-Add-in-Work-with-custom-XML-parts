@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/04f9c26e-88fd-4dfd-b715-9733d17420b6Combined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Apps for Office: Work with custom XML parts</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Apps for Office: Work with custom XML parts</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Word 2013, apps for Office
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Binding
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/8/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Apps-for-Office-Work-with-d58e7a79">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div id="header">
+<table id="bottomTable" cellpadding="0" cellspacing="0">
+<tbody>
+<tr id="headerTableRow1">
+<td align="left"><span id="runningHeaderText"></span></td>
+</tr>
+<tr id="headerTableRow2">
+<td align="left"><span id="nsrTitle">Apps for Office: Work with custom XML parts</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="mainSection">
+<div id="mainBody">
+<div>
+<p><span>Summary:</span> This sample writes user-specified text to a custom XML part that is bound to a content control within a Word 2013 document.</p>
+</div>
+<h1>Description</h1>
+<div id="sectionSection0" name="collapseableSection">
+<p>The <i>Apps for Office: Work with custom XML parts</i> sample opens a Word file, CustomXMLPartSample.docx, which already contains a custom XML part that has the namespace
+<b>TimeSummary</b>. When the user enters text in the <b><span class="ui">Client Name</span></b> text box and chooses
+<b><span class="ui">Update Client</span></b>, the <b><span class="keyword">cmdUpdateClient_onClick</span></b> function is executed. This function uses the
+<a href="http://msdn.microsoft.com/en-us/library/fp142144(office.15).aspx" >
+getByNamespaceAsync</a> method of the <a href="http://msdn.microsoft.com/en-us/library/fp142202(office.15).aspx" >
+CustomXmlParts</a> object to identify the custom XML part whose namespace is <b><span class="keyword">TimeSummary</span></b>. The function is passed a callback function,
+<b><span class="keyword">onGotXml</span></b>, which uses the <a href="http://msdn.microsoft.com/en-us/library/fp161017(office.15).aspx" >
+getNodesAsync</a> method of the <a href="http://msdn.microsoft.com/en-us/library/fp161160(office.15).aspx" >
+CustomXmlPart</a> object to get the Client node of the XML part. That function, in turn, is passed another callback function,
+<b><span class="keyword">onGotNode</span></b>, which uses the <a href="http://msdn.microsoft.com/en-us/library/fp161052(office.15).aspx" >
+setXmlAsync</a> method of the <a href="http://msdn.microsoft.com/en-us/library/fp142260(office.15).aspx" >
+CustomXmlNode</a> object to set the text in the content control that is bound to the client node of the Time Summary custom XML part to the new text.</p>
+<p>Choosing <b><span class="ui">Is Part Built In</span></b> executes the <b><span class="keyword">showXMLPartBuiltIn</span></b> function, which uses the
+<a href="http://msdn.microsoft.com/en-us/library/fp161022(office.15).aspx" >
+getByIdAsync</a> method of the <b><span class="keyword">CustomXmlParts</span></b> object to get the Time Summary part, and then it uses the
+<a href="http://msdn.microsoft.com/en-us/library/fp161095(office.15).aspx" >
+builtIn</a> property of the <b><span class="keyword">CustomXmlPart</span></b> object to test whether the part is built-in or custom.</p>
+<p>Choosing <b><span class="ui">Add Part</span></b> executes the <b><span class="keyword">addCustomXMLPart</span></b> function, which uses the
+<a href="http://msdn.microsoft.com/en-us/library/fp161009(office.15).aspx" >
+addAsync</a> method of the <b><span class="keyword">CustomXmlParts</span></b> object to add a new custom XML part named NewCustomXmlPart to the document. Choosing
+<b><span class="ui">Delete Part</span></b> executes the <b><span class="keyword">deletePart</span></b> function, which uses the
+<a href="http://msdn.microsoft.com/en-us/library/fp142157(office.15).aspx" >
+deleteAysnc</a> method of the <b><span class="keyword">CustomXmlPart</span></b> object to delete the part.</p>
+</div>
+<h1>Prerequisites</h1>
+<div id="sectionSection1" name="collapseableSection">
+<p>This sample requires the following:</p>
+<ul>
+<li>
+<p>Word 2013.</p>
+</li><li>
+<p>Visual Studio 2012; apps for Office project template.</p>
+</li><li>
+<p>Internet Explorer 9 or Internet Explorer 10.</p>
+</li><li>
+<p>Basic familiarity with JavaScript and HTML.</p>
+</li></ul>
+</div>
+<h1>Key components</h1>
+<div id="sectionSection2" name="collapseableSection">
+<p>The <i>Apps for Office: Work with custom XML parts</i> sample is created by the CustomXMLApp solution, which contains the following projects and important files:</p>
+<ul>
+<li>
+<p>The CustomXMLApp project, including the following files:</p>
+<ul>
+<li>
+<p>CustomXMLApp.xml manifest file</p>
+</li><li>
+<p>CustomXMLPartSample.docx file</p>
+</li></ul>
+</li><li>
+<p>The CustomXMLAppWeb project, including the following files:</p>
+<ul>
+<li>
+<p>Home.html file</p>
+</li><li>
+<p>Home.js file</p>
+</li></ul>
+</li></ul>
+</div>
+<h1>Configure the sample</h1>
+<div id="sectionSection3" name="collapseableSection">
+<p>No additional configuration is necessary.</p>
+</div>
+<h1>Build the sample</h1>
+<div id="sectionSection4" name="collapseableSection">
+<p>Choose the F5 key in Visual Studio 2012 to build and deploy the app and open it in Word 2013.</p>
+</div>
+<h1>Run and test the sample</h1>
+<div id="sectionSection5" name="collapseableSection">
+<ol>
+<li>
+<p>Open the CustomXMLApp.sln file in Visual Studio 2012.</p>
+</li><li>
+<p>Choose the F5 key in Visual Studio 2012 to build and deploy the app.</p>
+</li><li>
+<p>In the app task pane, enter text into the <b><span class="ui">Client name</span></b> box, and then choose
+<b><span class="ui">Update client name</span></b>.</p>
+</li><li>
+<p>Choose <b><span class="ui">Is Custom part built in?</span></b> to determine whether the Time Summary part of the document is built in.</p>
+</li><li>
+<p>Choose <b><span class="ui">Add CustomXML part</span></b> to add a new part to the document, and choose
+<b><span class="ui">Delete CustomXML part(s)</span></b> to delete the part or parts.</p>
+</li></ol>
+<p>You can view a list of the custom XML parts in a document by opening the <b><span class="ui">XML Mapping</span></b> pane in Word (<b><span class="ui">Developer</span></b> tab).</p>
+</div>
+<h1>Troubleshooting</h1>
+<div id="sectionSection6" name="collapseableSection">
+<p>If the app fails to respond as described, try reloading it. (In the task pane, choose the down arrow, and then choose the
+<b><span class="ui">Reload</span></b> button.)</p>
+</div>
+<h1>Change log</h1>
+<div id="sectionSection7" name="collapseableSection">
+<p>Third release.</p>
+</div>
+<h1>Related content</h1>
+<div id="sectionSection8" name="collapseableSection">
+<ul>
+<li>
+<p><a href="http://msdn.microsoft.com/en-us/library/fp142185(office.15).aspx" >JavaScript API for Office</a>
+</p>
+</li></ul>
+</div>
+</div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>
