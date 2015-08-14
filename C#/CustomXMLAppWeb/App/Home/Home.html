@@ -8,11 +8,12 @@
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
     <link href="../../Content/Office.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/fabric.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/fabric.components.min.css" rel="stylesheet" type="text/css" />
     <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js" type="text/javascript"></script>
 
     <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
     <!--    <script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>       -->
-    <!--    <script src="../../Scripts/Office/1.0/office.js" type="text/javascript"></script>          -->
 
     <link href="../App.css" rel="stylesheet" type="text/css" />
     <script src="../App.js" type="text/javascript"></script>
@@ -22,18 +23,32 @@
 </head>
 <body>
     <!-- Page content -->
-    <div id="content-header">
-        <div class="padding">
-            <h1>Welcome!</h1>
-        </div>
-    </div>
+    <div class='padding ms-font-su ms-fontColor-white ms-bgColor-themePrimary height: 80px overflow: hidden'>Welcome!</div>
     <div id="content-main" class="padding">            
-            <label><strong>Client name:</strong></label><br /><br />            
-            <input id="txtClientName" type="text" /><br /><br />
-            <button id="update-client">Update client name</button><br /><br />                 
-            <button id="add-part">Add CustomXML part</button><br /><br />
-            <button id="delete-part">Delete CustomXML part(s)</button><br /><br />
-            <button id="show-is-built-in">Is CustomXML part built in?</button><br /><br />           
+            <div class="ms-TextField">
+                <label class="ms-Label is-required">Client name:</label>
+                <input class="ms-TextField-field" id="txtClientName" type="text">
+            </div>
+            <button class="ms-Button ms-Button--primary" id="update-client">
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                <span class="ms-Button-label">Update client name</span>
+                <span class="ms-Button-description">Description of the action this button takes</span>
+            </button>
+            <button class="ms-Button ms-Button--primary" id="add-part">
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                <span class="ms-Button-label">Add CustomXML part</span>
+                <span class="ms-Button-description">Description of the action this button takes</span>
+            </button>
+            <button class="ms-Button ms-Button--primary" id="delete-part">
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                <span class="ms-Button-label">Delete CustomXML part(s)</span>
+                <span class="ms-Button-description">Description of the action this button takes</span>
+            </button>
+            <button class="ms-Button ms-Button--primary" id="show-is-built-in">
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                <span class="ms-Button-label">Is CustomXML part built in?</span>
+                <span class="ms-Button-description">Description of the action this button takes</span>
+            </button>
         <div id="message" class="padding"></div>         
      </div>      
 </body>     
