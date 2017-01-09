@@ -39,15 +39,12 @@ Choose the F5 key in Visual Studio to build and deploy the app and open it in Wo
 
 **Run and test the sample**
 
-1 Open the CustomXMLApp.sln file in Visual Studio.
-
-2 Choose the F5 key in Visual Studio to build and deploy the app.
-
-3 In the app task pane, enter text into the Client name box, and then choose Update client name.
-
-4 Choose Is Custom part built in? to determine whether the Time Summary part of the document is built in.
-
-5 Choose Add CustomXML part to add a new part to the document, and choose Delete CustomXML part(s) to delete the part or parts.
+1. Open the CustomXMLApp.sln file in Visual Studio.
+2. Choose the F5 key in Visual Studio to build the sample and deploy it to Word. Word will open.
+3. On the **Home** ribbon, click **Open** in the **Custom XML Parts** group.
+3. In the app task pane, enter text into the Client name box, and then choose Update client name.
+4. Choose Is Custom part built in? to determine whether the Time Summary part of the document is built in.
+5. Choose Add CustomXML part to add a new part to the document, and choose Delete CustomXML part(s) to delete the part or parts.
 
 You can view a list of the custom XML parts in a document by opening the XML Mapping pane in Word (Developer tab).
 
