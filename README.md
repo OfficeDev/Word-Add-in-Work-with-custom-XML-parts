@@ -1,17 +1,7 @@
----
-page_type: sample
-products:
-- office-word
-- office-365
-languages:
-- javascript
-extensions:
-  contentType: samples
-  technologies:
-  - Add-ins
-  createdDate: 8/13/2015 11:32:21 AM
----
-# Word-Add-in-Work-with-custom-XML-parts
+# [ARCHIVED] Word-Add-in-Work-with-custom-XML-parts
+
+**Note:** This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in. 
+
 This sample writes user-specified text to a custom XML part that is bound to a content control within a Word 2013 document.
 
 **Description**
